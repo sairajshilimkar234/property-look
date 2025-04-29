@@ -86,7 +86,7 @@ function Navbar() {
           100% { transform: translateX(0); }
         }
         .animate-slide-in {
-          animation: slide-in 0.5s ease-out forwards;
+          animation: slide-in 0.3s ease-out forwards;
         }
       `}</style>
 		</>
