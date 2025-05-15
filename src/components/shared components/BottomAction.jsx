@@ -6,7 +6,7 @@ function BottomActions() {
       
       {/* Phone */}
       <a
-        href="tel:+911234567890"
+        href="tel:9657308229"
         className="flex flex-col items-center hover:text-sky-800"
       >
         <Phone className="w-6 h-6" />
