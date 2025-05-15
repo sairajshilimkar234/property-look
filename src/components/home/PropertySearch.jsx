@@ -5,8 +5,8 @@ function PropertySearch() {
   const [propertyType, setPropertyType] = useState("Residential");
   const [isLoading, setIsLoading] = useState(false); // State for fade animation
 
-  const areas = ["Kharadi", "Viman Nagar", "Baner", "Wakad", "Hinjewadi"];
-  const residentialInventory = ["1 BHK", "2 BHK", "3 BHK"];
+  const areas = ["Kharadi / Mundhwa / Koregaon Park / Dhanori", "Baner / Wakad / Hinjewadi / Tathawade", "Bibwewadi / NIBM Road", "Kothrud / Bavdhan", "Salisbury Park / Sinhgad Road"];
+  const residentialInventory = ["2 BHK", "3 BHK", "4 BHK and above"];
   const commercialInventory = ["Office Space", "Shop"];
   const budgets = ["< ₹30L", "₹30L - ₹50L", "₹50L - ₹75L", "> ₹75L"];
 

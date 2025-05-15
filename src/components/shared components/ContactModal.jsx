@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import { User, MapPin, Phone } from "lucide-react"; // Import icons
 
 function ContactModal() {
   const [show, setShow] = useState(true);
@@ -68,43 +69,55 @@ function ContactModal() {
             name="access_key"
             value="your-web3forms-access-key"
           />
-          <div className="mb-3">
+
+          {/* Name Field */}
+          <div className="mb-3 flex items-center border rounded px-2">
+            <User className="w-5 h-5 text-sky-600" />
             <input
               type="text"
               name="name"
               required
               placeholder="Your Name"
-              className="w-full p-2 border rounded focus:outline-none"
+              className="w-full p-2 outline-none"
             />
           </div>
-          <div className="mb-3">
+
+          {/* Location Field */}
+          <div className="mb-3 flex items-center border rounded px-2">
+            <MapPin className="w-5 h-5 text-sky-600" />
             <select
               name="location"
               required
-              className="w-full p-2 border rounded text-gray-600"
+              className="w-full p-2 outline-none text-gray-600 bg-transparent"
             >
               <option value="">Select Location</option>
               <option value="Pune">Pune</option>
-              <option value="Mumbai">Mumbai</option>
-              <option value="Nashik">Nashik</option>
-              <option value="Nagpur">Nagpur</option>
+              <option value="Mumbai">PCMC</option>
+              <option value="Nashik">East Pune</option>
             </select>
           </div>
-          <div className="mb-3">
+
+          {/* Phone Field */}
+          <div className="mb-4 flex items-center border rounded px-2">
+            <Phone className="w-5 h-5 text-sky-600" />
             <input
               type="tel"
               name="phone"
               required
               placeholder="Phone Number"
-              className="w-full p-2 border rounded focus:outline-none"
+              className="w-full p-2 outline-none"
             />
           </div>
-          <button
-            type="submit"
-            className="bg-sky-600 text-white w-full py-2 rounded hover:bg-sky-700 transition"
-          >
-            Get Call Back
-          </button>
+
+          {/* Submit Button */}
+          <div className="flex justify-center">
+            <button
+              type="submit"
+              className="bg-sky-600 text-white px-6 py-2 rounded-xl hover:bg-sky-700 transition"
+            >
+              Get Call Back
+            </button>
+          </div>
         </form>
       </div>
     </div>

@@ -15,7 +15,7 @@ function BottomActions() {
 
       {/* WhatsApp */}
       <a
-        href="https://wa.me/911234567890"
+        href="https://wa.me/9657308229" 
         target="_blank"
         rel="noopener noreferrer"
         className="flex flex-col items-center hover:text-sky-800"

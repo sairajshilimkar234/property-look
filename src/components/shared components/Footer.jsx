@@ -25,8 +25,8 @@ function Footer() {
         <div>
           <h2 className="text-lg font-bold mb-3">Contact Us</h2>
           <ul className="space-y-3 text-sm">
-            <li className="flex items-center"><Phone className="w-4 h-4 mr-2" /> +91 12345 67890</li>
-            <li className="flex items-center"><Mail className="w-4 h-4 mr-2" /> info@myestate.com</li>
+            <li className="flex items-center"><Phone className="w-4 h-4 mr-2" /> +91 9657308229</li>
+            <li className="flex items-center"><Mail className="w-4 h-4 mr-2" /> propertyloook.pl@gmail.com</li>
             <li className="flex items-center"><MapPin className="w-4 h-4 mr-2" /> Pune, Maharashtra</li>
           </ul>
         </div>
@@ -35,7 +35,7 @@ function Footer() {
 
       {/* Bottom Bar */}
       <div className="border-t border-gray-300 mt-10 pt-4 text-center text-sm text-gray-600">
-        © {new Date().getFullYear()} MyEstate. All rights reserved.
+        © {new Date().getFullYear()} Property Look. All rights reserved.
       </div>
     </footer>
   );
