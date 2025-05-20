@@ -1,11 +1,19 @@
 import { useState, useRef } from "react";
 import { motion, useInView } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 
 function PropertySearch() {
   const [propertyType, setPropertyType] = useState("Residential");
   const [isLoading, setIsLoading] = useState(false); // State for fade animation
+  const navigate = useNavigate();
 
-  const areas = ["Kharadi / Mundhwa / Koregaon Park / Dhanori", "Baner / Wakad / Hinjewadi / Tathawade", "Bibwewadi / NIBM Road", "Kothrud / Bavdhan", "Salisbury Park / Sinhgad Road"];
+  const areas = [
+    "Kharadi / Mundhwa / Koregaon Park / Dhanori",
+    "Baner / Wakad / Hinjewadi / Tathawade",
+    "Bibwewadi / NIBM Road",
+    "Kothrud / Bavdhan",
+    "Salisbury Park / Sinhgad Road",
+  ];
   const residentialInventory = ["2 BHK", "3 BHK", "4 BHK and above"];
   const commercialInventory = ["Office Space", "Shop"];
   const budgets = ["< ₹30L", "₹30L - ₹50L", "₹50L - ₹75L", "> ₹75L"];
@@ -22,15 +30,19 @@ function PropertySearch() {
   };
 
   return (
-    <div className="w-full bg-gradient-to-br from-sky-100 to-sky-70 py-7 px-5" id="property-form" ref={ref}>
+    <div
+      className="w-full bg-gradient-to-br from-sky-100 to-sky-70 py-7 px-5" // fixed color here
+      id="property-form"
+      ref={ref}
+    >
       {/* Animated Heading */}
       <motion.h2
         initial={{ opacity: 0, y: -30 }}
         animate={isInView ? { opacity: 1, y: 0 } : {}}
         transition={{ duration: 0.8 }}
-        className="text-2xl font-bold text-center text-sky-700 mb-6"
+        className="text-2xl font-bold text-center text-sky-800 mb-6"
       >
-        Find your perfect property
+        Find Your Perfect Property
       </motion.h2>
 
       {/* Animated Form Card */}
@@ -48,8 +60,8 @@ function PropertySearch() {
               onClick={() => handlePropertyTypeChange(type)}
               className={`relative pb-1 transition ${
                 propertyType === type
-                  ? "text-sky-600 after:absolute after:left-0 after:bottom-0 after:h-0.5 after:w-full after:bg-sky-600"
-                  : "text-gray-500 hover:text-sky-600"
+                  ? "text-sky-800 after:absolute after:left-0 after:bottom-0 after:h-0.5 after:w-full after:bg-sky-800"
+                  : "text-gray-800 hover:text-sky-800"
               }`}
             >
               {type}
@@ -108,7 +120,10 @@ function PropertySearch() {
 
           {/* Search Button */}
           <div className="pt-2">
-            <button className="w-full bg-sky-600 hover:bg-sky-700 text-white py-2 rounded font-semibold transition">
+            <button
+              className="w-full bg-sky-800 hover:bg-sky-700 text-white py-2 rounded font-semibold transition"
+              onClick={() => navigate("/maintainance")} // fixed onClick handler
+            >
               Search
             </button>
           </div>

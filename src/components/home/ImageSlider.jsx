@@ -2,10 +2,10 @@ import { useEffect, useRef, useState } from 'react';
 import { motion, useInView, AnimatePresence } from 'framer-motion';
 
 const images = [
-  'https://www.commercialproperty.review/wp-content/uploads/2020/10/Forest-County-Kharadi-Pune.jpg',
-  'https://www.commercialproperty.review/wp-content/uploads/2020/10/Forest-County-Kharadi-Pune.jpg',
-  'https://www.commercialproperty.review/wp-content/uploads/2020/10/Forest-County-Kharadi-Pune.jpg',
-  'https://www.commercialproperty.review/wp-content/uploads/2020/10/Forest-County-Kharadi-Pune.jpg',
+  "../slider1.jpeg",
+  "../slider2.jpg",
+  "../slider3.jpeg",
+  "../slider4.jpeg",
 ];
 
 function ImageSlider() {
@@ -50,7 +50,7 @@ function ImageSlider() {
           {images.map((_, idx) => (
             <motion.div
               key={idx}
-              className={`w-2 h-2 rounded-full ${current === idx ? 'bg-sky-600 scale-125' : 'bg-gray-400'
+              className={`w-2 h-2 rounded-full ${current === idx ? 'bg-sky-800 scale-125' : 'bg-gray-400'
                 }`}
               animate={{
                 scale: current === idx ? 1.25 : 1,
@@ -69,7 +69,7 @@ function ImageSlider() {
           initial={{ opacity: 0, y: -20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 1, ease: 'easeOut' }}
-          className="text-3xl md:text-3xl font-bold text-sky-600"
+          className="text-3xl md:text-3xl font-bold text-sky-800 font-serif"
         >
           PROPERTY LOOK
         </motion.h2>
@@ -77,7 +77,7 @@ function ImageSlider() {
           initial={{ opacity: 0, y: 10 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ delay: 0.4, duration: 1, ease: 'easeOut' }}
-          className="text-black text-m md:text-m mt-1"
+          className="text-black text-m md:text-m mt-1 font-sans-serif"
         >
           Discover your dream property with trusted guidance and expert service.
         </motion.p>

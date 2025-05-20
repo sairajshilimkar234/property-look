@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 
-function Banner({ heading, bgImage }) {
+function Banner({ heading, bgImage="../bg_blur.png" }) {
   return (
     <div className="relative w-full h-[250px] md:h-[500px] overflow-hidden">
       {/* Background Image with Blur and animation */}
@@ -28,7 +28,7 @@ function Banner({ heading, bgImage }) {
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 1, delay: 0.2, ease: 'easeOut' }}
       >
-        <h1 className="text-white text-3xl md:text-5xl font-bold drop-shadow-md">
+        <h1 className="text-white text-3xl md:text-5xl font-bold drop-shadow-md font-serif">
           {heading}
         </h1>
       </motion.div>

@@ -50,7 +50,7 @@ const AboutPropertyLook = () => {
             About Property Look
           </h2>
           <p className="text-gray-700 text-lg mb-4">
-            Property Look is your trusted destination for finding genuine and RERA-approved properties in Pune. Whether you're buying, renting, or investing, we simplify your search with verified listings and expert support.
+            Property Look is your trusted destination for finding genuine and RERA-approved properties in Pune. Whether you're buying, renting, or investing, we simplify your search with verified listings and expert support with no comission and zero brokerage.
           </p>
           <p className="text-gray-700 text-lg">
             Our platform is designed to provide transparency, clarity, and speed in real estate decisions. Say goodbye to fake listings and hello to a smarter, smoother property experience.
@@ -83,7 +83,7 @@ const AboutPropertyLook = () => {
           {/* Explore Button */}
           <button
             onClick={scrollToForm}
-            className="mt-6 bg-sky-600 hover:bg-sky-700 text-white px-6 py-3 rounded-md font-medium transition shadow-md"
+            className="mt-6 bg-sky-800 hover:bg-sky-700 text-white px-6 py-3 rounded-md font-medium transition shadow-md"
           >
             Explore Properties
           </button>

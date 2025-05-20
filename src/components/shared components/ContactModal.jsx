@@ -40,26 +40,26 @@ function ContactModal() {
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-opacity-50 backdrop-blur-lg px-4">
       <div
         ref={modalRef}
-        className="relative bg-white w-full max-w-sm sm:max-w-md p-4 rounded-xl shadow-xl"
+        className="relative bg-white w-full max-w-sm sm:max-w-md p-4 rounded-xl shadow-xl border-2 border-sky-50"
       >
         {/* Cancel button */}
         <button
           onClick={() => setShow(false)}
           className="absolute top-2 right-2 text-white bg-gray-700 hover:bg-red-600 rounded-full w-8 h-8 flex items-center justify-center text-lg"
         >
-          x
+          X
         </button>
 
         {/* Image */}
         <img
-          src="https://www.commercialproperty.review/wp-content/uploads/2020/10/Forest-County-Kharadi-Pune.jpg"
+          src="../refresh.png"
           alt="Contact"
           className="w-full h-40 object-cover rounded-lg mb-4"
         />
 
         {/* Company Name */}
-        <h2 className="text-2xl font-bold text-sky-600 text-center mb-4">
-          Property Look
+        <h2 className="text-2xl font-bold text-sky-800 text-center mb-4 font-serif">
+          PROPERTY LOOK
         </h2>
 
         {/* Form */}
@@ -67,12 +67,12 @@ function ContactModal() {
           <input
             type="hidden"
             name="access_key"
-            value="your-web3forms-access-key"
+            value="e0972470-5cfc-4e9a-90fe-9559976760e2"
           />
 
           {/* Name Field */}
           <div className="mb-3 flex items-center border rounded px-2">
-            <User className="w-5 h-5 text-sky-600" />
+            <User className="w-5 h-5 text-sky-800" />
             <input
               type="text"
               name="name"
@@ -84,7 +84,7 @@ function ContactModal() {
 
           {/* Location Field */}
           <div className="mb-3 flex items-center border rounded px-2">
-            <MapPin className="w-5 h-5 text-sky-600" />
+            <MapPin className="w-5 h-5 text-sky-800" />
             <select
               name="location"
               required
@@ -99,7 +99,7 @@ function ContactModal() {
 
           {/* Phone Field */}
           <div className="mb-4 flex items-center border rounded px-2">
-            <Phone className="w-5 h-5 text-sky-600" />
+            <Phone className="w-5 h-5 text-sky-800" />
             <input
               type="tel"
               name="phone"
@@ -113,7 +113,7 @@ function ContactModal() {
           <div className="flex justify-center">
             <button
               type="submit"
-              className="bg-sky-600 text-white px-6 py-2 rounded-xl hover:bg-sky-700 transition"
+              className="bg-sky-800 text-white px-6 py-2 rounded-xl hover:bg-sky-700 transition font-serif"
             >
               Get Call Back
             </button>

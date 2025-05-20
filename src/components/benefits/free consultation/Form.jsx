@@ -22,7 +22,7 @@ function Form() {
 		e.preventDefault();
 
 		const form = new FormData();
-		form.append('access_key', 'YOUR_WEB3FORMS_ACCESS_KEY'); // Replace with your Web3Forms access key
+		form.append('access_key', 'e0972470-5cfc-4e9a-90fe-9559976760e2'); // Replace with your Web3Forms access key
 		form.append('subject', 'New Consultation Request');
 		form.append('from_name', formData.name);
 		form.append('phone', formData.phone);
@@ -64,7 +64,7 @@ function Form() {
 
 
 	return (
-		<section className="bg-white px-6 md:px-24 py-5 text-sky-900">
+		<section className="bg-white px-6 md:px-24 py-5 text-sky-900 mb-5">
 			<ToastContainer />
 			<motion.div
 				ref={ref}

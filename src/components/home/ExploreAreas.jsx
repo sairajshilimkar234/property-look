@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 
 const areaData = [
   {
@@ -34,6 +35,13 @@ const cardVariants = {
 };
 
 function ExploreAreas() {
+  const navigate = useNavigate();
+
+  const handleViewDetails = (areaName) => {
+    // Navigate to properties/areaname URL (encode areaName for safety)
+    navigate(`/properties/${encodeURIComponent(areaName)}`);
+  };
+
   return (
     <div className="bg-white py-5 px-5 md:px-10">
       <h2 className="text-3xl font-bold text-sky-700 text-center mb-8">
@@ -65,7 +73,10 @@ function ExploreAreas() {
                   <p className="text-sm">{area.properties} properties</p>
                 </div>
 
-                <button className="bg-white text-sky-600 font-medium py-2 px-4 rounded hover:bg-sky-100 transition self-start">
+                <button
+                  onClick={() => handleViewDetails(area.name)}
+                  className="bg-white text-sky-600 font-medium py-2 px-4 rounded hover:bg-sky-100 transition self-start"
+                >
                   View More Details
                 </button>
               </div>
