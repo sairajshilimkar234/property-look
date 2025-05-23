@@ -40,7 +40,7 @@ function ContactModal() {
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-opacity-50 backdrop-blur-lg px-4">
       <div
         ref={modalRef}
-        className="relative bg-white w-full max-w-sm sm:max-w-md p-4 rounded-xl shadow-xl border-2 border-sky-50"
+        className="relative bg-white w-full max-w-sm sm:max-w-md p-4 rounded-xl shadow-xl border-3 border-yellow-600"
       >
         {/* Cancel button */}
         <button
@@ -54,12 +54,12 @@ function ContactModal() {
         <img
           src="../refresh.png"
           alt="Contact"
-          className="w-full h-40 object-cover rounded-lg mb-4"
+          className="w-full h-40 object-cover rounded-lg mb-4 border-3 border-yellow-600"
         />
 
         {/* Company Name */}
-        <h2 className="text-2xl font-bold text-sky-800 text-center mb-4 font-serif">
-          PROPERTY LOOK
+        <h2 className="text-2xl font-bold text-yellow-600 text-center mb-4 font-serif">
+          Inquiry Now
         </h2>
 
         {/* Form */}
@@ -71,20 +71,20 @@ function ContactModal() {
           />
 
           {/* Name Field */}
-          <div className="mb-3 flex items-center border rounded px-2">
-            <User className="w-5 h-5 text-sky-800" />
+          <div className="mb-3 flex items-center border rounded px-2 border-yellow-600">
+            <User className="w-5 h-5 text-yellow-600" />
             <input
               type="text"
               name="name"
               required
               placeholder="Your Name"
-              className="w-full p-2 outline-none"
+              className="w-full p-2 outline-none text-black"
             />
           </div>
 
           {/* Location Field */}
-          <div className="mb-3 flex items-center border rounded px-2">
-            <MapPin className="w-5 h-5 text-sky-800" />
+          <div className="mb-3 flex items-center border rounded px-2 border-yellow-600">
+            <MapPin className="w-5 h-5 text-yellow-600" />
             <select
               name="location"
               required
@@ -98,8 +98,8 @@ function ContactModal() {
           </div>
 
           {/* Phone Field */}
-          <div className="mb-4 flex items-center border rounded px-2">
-            <Phone className="w-5 h-5 text-sky-800" />
+          <div className="mb-4 flex items-center border rounded px-2 border-yellow-600">
+            <Phone className="w-5 h-5 text-yellow-600" />
             <input
               type="tel"
               name="phone"
@@ -113,7 +113,7 @@ function ContactModal() {
           <div className="flex justify-center">
             <button
               type="submit"
-              className="bg-sky-800 text-white px-6 py-2 rounded-xl hover:bg-sky-700 transition font-serif"
+              className="bg-yellow-600 text-white px-6 py-2 rounded-xl hover:bg-sky-700 transition font-serif"
             >
               Get Call Back
             </button>

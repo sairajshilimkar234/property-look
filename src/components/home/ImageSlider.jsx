@@ -22,7 +22,7 @@ function ImageSlider() {
   }, []);
 
   return (
-    <div className="w-full overflow-hidden pt-15 mb-5">
+    <div className="w-full overflow-hidden pt-18 mb-5">
       {/* Slider */}
       <div className="relative overflow-hidden">
         <div className="flex w-full transition-transform duration-700 ease-in-out"
@@ -31,7 +31,7 @@ function ImageSlider() {
           {images.map((src, idx) => (
             <motion.div
               key={idx}
-              className="w-full h-[250px] md:h-[500px] flex-shrink-0"
+              className="w-full h-[200px] md:h-[500px] flex-shrink-0"
               initial={{ x: 100, opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
               transition={{ duration: 1, ease: 'easeOut' }}

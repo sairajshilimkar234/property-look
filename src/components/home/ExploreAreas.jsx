@@ -4,21 +4,18 @@ import { useNavigate } from "react-router-dom";
 const areaData = [
   {
     name: "Pune East",
-    properties: 24,
     image:
-      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=60",
+      "../../majestic.jpeg",
   },
   {
     name: "Pune West",
-    properties: 18,
     image:
-      "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=800&q=60",
+      "../../mayuk.jpeg",
   },
   {
     name: "Pune South",
-    properties: 30,
     image:
-      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=60",
+      "../../sterling.jpeg",
   },
 ];
 
@@ -70,14 +67,13 @@ function ExploreAreas() {
               <div className="relative z-10 h-full flex flex-col justify-between p-4 text-white bg-black/40">
                 <div>
                   <h3 className="text-xl font-bold">{area.name}</h3>
-                  <p className="text-sm">{area.properties} properties</p>
                 </div>
 
                 <button
                   onClick={() => handleViewDetails(area.name)}
                   className="bg-white text-sky-600 font-medium py-2 px-4 rounded hover:bg-sky-100 transition self-start"
                 >
-                  View More Details
+                  View Properties
                 </button>
               </div>
             </motion.div>

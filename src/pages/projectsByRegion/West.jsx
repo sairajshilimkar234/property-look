@@ -5,7 +5,7 @@ import PropertiesByRegion from '../../components/shared components/PropertiesByR
 function West() {
   return (
 	<div className='mt-16'>
-	  <Banner heading="Pune West" bgImage="../bg_blur.png" />
+	  <Banner heading="Properties in West Pune" bgImage="../bg_blur.png" />
 	  <PropertiesByRegion region="West Pune" />
 	</div>
   )

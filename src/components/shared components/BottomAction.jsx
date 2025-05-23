@@ -31,7 +31,7 @@ function BottomActions() {
         className="flex flex-col items-center hover:text-sky-800"
       >
         <HelpCircle className="w-6 h-6" />
-        <span className="text-sm">Enquire</span>
+        <span className="text-sm">Inquire</span>
       </Link>
 
     </div>

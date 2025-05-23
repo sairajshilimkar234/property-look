@@ -2,6 +2,7 @@ import React, { useRef } from "react";
 import { FaWhatsapp, FaMapMarkerAlt, FaHome, FaRupeeSign } from "react-icons/fa";
 import { motion, useInView } from "framer-motion";
 import properties from "../../../data/PropertiesForPL";
+import { FaFilePdf, FaDraftingCompass, FaFileInvoiceDollar } from "react-icons/fa";
 
 // Individual Property Card component with scroll animation
 const PropertyCard = ({ property }) => {
@@ -38,7 +39,7 @@ const PropertyCard = ({ property }) => {
         <div className="space-y-3">
           <h2 className="text-2xl font-bold text-sky-800 font-serif">{property.name}</h2>
 
-          <div className="text-sm text-gray-700 divide-y divide-gray-200 border rounded-md bg-white p-4 mx-0 mb-4 shadow-sm">
+          <div className="text-gray-900 divide-y divide-gray-400 border rounded-md bg-white p-4 mx-0 mb-4 shadow-sm">
             <div className="flex items-center gap-3 pb-2">
               <FaMapMarkerAlt className="text-sky-600 text-base" />
               <span><strong>Location:</strong> {property.location}</span>
@@ -53,17 +54,35 @@ const PropertyCard = ({ property }) => {
             </div>
           </div>
 
+          <p className="text-lg font-serif text-black">Get More Details :</p>
+
           {/* Icons */}
-          <div className="bg-sky-100 border-l-4 border-sky-800 text-sky-800 p-4 rounded-lg text-sm mb-1 leading-relaxed">
-            Want the <strong>Brochure</strong>, <strong>Floor Plan</strong>, or <strong>Cost Sheet</strong>?<br />
-            Get everything instantly via WhatsApp!
+          <div className="grid grid-cols-3 sm:grid-cols-3 gap-4">
+            {[
+              { label: "Brochure", icon: <FaFilePdf className="text-sky-700 text-lg" /> },
+              { label: "Floor Plan", icon: <FaDraftingCompass className="text-sky-700 text-lg" /> },
+              { label: "Cost Sheet", icon: <FaFileInvoiceDollar className="text-sky-700 text-lg" /> },
+            ].map(({ label, icon }) => (
+              <motion.a
+                key={label}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                href={whatsappLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex flex-col items-center justify-center bg-white hover:bg-sky-50 text-sky-800 border border-sky-700 text-sm font-medium p-5 rounded-xl shadow transition h-28 w-full text-center"
+              >
+                {icon}
+                <span className="mt-2">{label}</span>
+              </motion.a>
+            ))}
           </div>
         </div>
 
         {/* CTA */}
         <div className="mt-6">
           <p className="text-sm text-gray-700 mb-5">
-            Let us help you explore your ideal home with full transparency and support.
+            Let us help you explore your ideal property with full transparency and support.
           </p>
           <motion.a
             whileHover={{ scale: 1.03 }}
@@ -102,7 +121,7 @@ const CommercialProperties = () => {
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5 }}
         >
-          No Commercial Properties Found.
+          No commercial properties found.
         </motion.p>
       )}
     </div>

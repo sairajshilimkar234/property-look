@@ -16,7 +16,7 @@ function PropertySearch() {
   ];
   const residentialInventory = ["2 BHK", "3 BHK", "4 BHK and above"];
   const commercialInventory = ["Office Space", "Shop"];
-  const budgets = ["< ₹30L", "₹30L - ₹50L", "₹50L - ₹75L", "> ₹75L"];
+  const budgets = ["< ₹50L", "₹50L - ₹1.00 Cr", "> ₹1.00 Cr"];
 
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
