@@ -44,21 +44,20 @@ function Navbar() {
       <nav className="bg-sky-800 shadow-md fixed top-0 left-0 right-0 z-50">
         <div className="max-w-screen-xl mx-auto px-4 py-3 flex justify-between items-center">
           {/* Logo + Company Name */}
-          <div className="flex items-center space-x-3">
+          <Link to="/" className="flex items-center space-x-3">
             <img src="../logo.jpg" alt="Logo" className="h-10 w-10 object-contain" />
             <div className="flex flex-col leading-tight">
               <span className="text-white font-bold text-xl font-serif">PROPERTY LOOK</span>
               <span className="text-sm text-black font-serif text-gray-300">Authorized Channel Partner</span>
             </div>
-          </div>
+          </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex space-x-8 text-white font-medium text-lg relative" ref={menuRef}>
             <Link
               to="/"
-              className={`hover:text-sky-600 transition duration-200 ${
-                isActive('/') ? 'underline underline-offset-4 font-semibold' : ''
-              }`}
+              className={`hover:text-sky-600 transition duration-200 ${isActive('/') ? 'underline underline-offset-4 font-semibold' : ''
+                }`}
             >
               Home
             </Link>
@@ -74,32 +73,28 @@ function Navbar() {
               >
                 Projects
                 <ChevronDown
-                  className={`ml-1 w-4 h-4 transition-transform duration-300 ${
-                    desktopProjectsOpen ? 'rotate-180' : ''
-                  }`}
+                  className={`ml-1 w-4 h-4 transition-transform duration-300 ${desktopProjectsOpen ? 'rotate-180' : ''
+                    }`}
                 />
               </button>
               <div
-                className={`absolute left-0 mt-2 w-44 bg-white rounded-md shadow-lg transition-all duration-300 z-50 ${
-                  desktopProjectsOpen
+                className={`absolute left-0 mt-2 w-44 bg-white rounded-md shadow-lg transition-all duration-300 z-50 ${desktopProjectsOpen
                     ? 'opacity-100 visible max-h-60'
                     : 'opacity-0 invisible max-h-0 overflow-hidden'
-                }`}
+                  }`}
               >
                 <Link
                   to="/projects/residential"
-                  className={`block px-4 py-2 text-sky-700 hover:bg-sky-100 transition-colors ${
-                    isActive('/projects/residential') ? 'font-semibold underline underline-offset-4' : ''
-                  }`}
+                  className={`block px-4 py-2 text-sky-700 hover:bg-sky-100 transition-colors ${isActive('/projects/residential') ? 'font-semibold underline underline-offset-4' : ''
+                    }`}
                   onClick={() => setDesktopProjectsOpen(false)}
                 >
                   Residential
                 </Link>
                 <Link
                   to="/projects/commercial"
-                  className={`block px-4 py-2 text-sky-700 hover:bg-sky-100 transition-colors ${
-                    isActive('/projects/commercial') ? 'font-semibold underline underline-offset-4' : ''
-                  }`}
+                  className={`block px-4 py-2 text-sky-700 hover:bg-sky-100 transition-colors ${isActive('/projects/commercial') ? 'font-semibold underline underline-offset-4' : ''
+                    }`}
                   onClick={() => setDesktopProjectsOpen(false)}
                 >
                   Commercial
@@ -118,32 +113,28 @@ function Navbar() {
               >
                 Benefits
                 <ChevronDown
-                  className={`ml-1 w-4 h-4 transition-transform duration-300 ${
-                    desktopBenefitsOpen ? 'rotate-180' : ''
-                  }`}
+                  className={`ml-1 w-4 h-4 transition-transform duration-300 ${desktopBenefitsOpen ? 'rotate-180' : ''
+                    }`}
                 />
               </button>
               <div
-                className={`absolute left-0 mt-2 w-48 bg-white rounded-md shadow-lg transition-all duration-300 z-50 ${
-                  desktopBenefitsOpen
+                className={`absolute left-0 mt-2 w-48 bg-white rounded-md shadow-lg transition-all duration-300 z-50 ${desktopBenefitsOpen
                     ? 'opacity-100 visible max-h-60'
                     : 'opacity-0 invisible max-h-0 overflow-hidden'
-                }`}
+                  }`}
               >
                 <Link
                   to="/benefits/consultation"
-                  className={`block px-4 py-2 text-sky-700 hover:bg-sky-100 transition-colors ${
-                    isActive('/benefits/consultation') ? 'font-semibold underline underline-offset-4' : ''
-                  }`}
+                  className={`block px-4 py-2 text-sky-700 hover:bg-sky-100 transition-colors ${isActive('/benefits/consultation') ? 'font-semibold underline underline-offset-4' : ''
+                    }`}
                   onClick={() => setDesktopBenefitsOpen(false)}
                 >
                   Free Consultation
                 </Link>
                 <Link
                   to="/benefits/homeloan"
-                  className={`block px-4 py-2 text-sky-700 hover:bg-sky-100 transition-colors ${
-                    isActive('/benefits/homeloan') ? 'font-semibold underline underline-offset-4' : ''
-                  }`}
+                  className={`block px-4 py-2 text-sky-700 hover:bg-sky-100 transition-colors ${isActive('/benefits/homeloan') ? 'font-semibold underline underline-offset-4' : ''
+                    }`}
                   onClick={() => setDesktopBenefitsOpen(false)}
                 >
                   Home Loan
@@ -153,9 +144,8 @@ function Navbar() {
 
             <Link
               to="/contact"
-              className={`hover:text-sky-600 transition duration-200 ${
-                isActive('/contact') ? 'underline underline-offset-4 font-semibold' : ''
-              }`}
+              className={`hover:text-sky-600 transition duration-200 ${isActive('/contact') ? 'underline underline-offset-4 font-semibold' : ''
+                }`}
             >
               Contact Us
             </Link>
@@ -192,9 +182,8 @@ function Navbar() {
               <Link
                 to="/"
                 onClick={() => setMobileOpen(false)}
-                className={`text-sky-800 hover:text-sky-800 transition-colors ${
-                  isActive('/') ? 'underline underline-offset-4' : ''
-                }`}
+                className={`text-sky-800 hover:text-sky-800 transition-colors ${isActive('/') ? 'underline underline-offset-4' : ''
+                  }`}
               >
                 Home
               </Link>
@@ -209,9 +198,8 @@ function Navbar() {
                   {showProjects ? <ChevronUp className="w-5 h-5" /> : <ChevronDown className="w-5 h-5" />}
                 </button>
                 <div
-                  className={`mt-2 pl-3 border-l-2 border-sky-200 transition-all duration-300 overflow-hidden ${
-                    showProjects ? 'max-h-32 opacity-100' : 'max-h-0 opacity-0'
-                  }`}
+                  className={`mt-2 pl-3 border-l-2 border-sky-200 transition-all duration-300 overflow-hidden ${showProjects ? 'max-h-32 opacity-100' : 'max-h-0 opacity-0'
+                    }`}
                 >
                   <Link
                     to="/projects/residential"
@@ -240,9 +228,8 @@ function Navbar() {
                   {showBenefits ? <ChevronUp className="w-5 h-5" /> : <ChevronDown className="w-5 h-5" />}
                 </button>
                 <div
-                  className={`mt-2 pl-3 border-l-2 border-sky-200 transition-all duration-300 overflow-hidden ${
-                    showBenefits ? 'max-h-32 opacity-100' : 'max-h-0 opacity-0'
-                  }`}
+                  className={`mt-2 pl-3 border-l-2 border-sky-200 transition-all duration-300 overflow-hidden ${showBenefits ? 'max-h-32 opacity-100' : 'max-h-0 opacity-0'
+                    }`}
                 >
                   <Link
                     to="/benefits/consultation"
@@ -264,9 +251,8 @@ function Navbar() {
               <Link
                 to="/contact"
                 onClick={() => setMobileOpen(false)}
-                className={`text-sky-700 hover:text-sky-900 transition-colors border-t border-gray-200 pt-3 ${
-                  isActive('/contact') ? 'underline underline-offset-4' : ''
-                }`}
+                className={`text-sky-700 hover:text-sky-900 transition-colors border-t border-gray-200 pt-3 ${isActive('/contact') ? 'underline underline-offset-4' : ''
+                  }`}
               >
                 Contact Us
               </Link>

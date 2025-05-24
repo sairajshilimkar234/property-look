@@ -22,9 +22,9 @@ function Form() {
 		e.preventDefault();
 
 		const form = new FormData();
-		form.append('access_key', 'e0972470-5cfc-4e9a-90fe-9559976760e2'); // Replace with your Web3Forms access key
+		form.append('access_key', 'e0972470-5cfc-4e9a-90fe-9559976760e2');
 		form.append('subject', 'New Consultation Request');
-		form.append('from_name', formData.name);
+		form.append('name', formData.name);
 		form.append('phone', formData.phone);
 		form.append('email', formData.email);
 		form.append('requirement', formData.requirement);
@@ -62,7 +62,6 @@ function Form() {
 	const ref = useRef(null);
 	const isInView = useInView(ref, { once: true, margin: '-100px' });
 
-
 	return (
 		<section className="bg-white px-6 md:px-24 py-5 text-sky-900 mb-5">
 			<ToastContainer />
@@ -77,7 +76,7 @@ function Form() {
 				</h2>
 
 				<form onSubmit={handleSubmit} className="max-w-xl mx-auto space-y-6">
-					{/* Name */}
+					{/* Full Name */}
 					<div>
 						<label className="block mb-1 font-semibold">Full Name</label>
 						<input
@@ -85,8 +84,8 @@ function Form() {
 							name="name"
 							value={formData.name}
 							onChange={handleChange}
-							placeholder="Enter your name"
 							required
+							placeholder="Enter your name"
 							className="w-full px-4 py-2 border border-sky-200 rounded-md focus:outline-none focus:ring-2 focus:ring-sky-400"
 						/>
 					</div>
@@ -99,13 +98,13 @@ function Form() {
 							name="phone"
 							value={formData.phone}
 							onChange={handleChange}
-							placeholder="Enter your mobile number"
 							required
+							placeholder="Enter your mobile number"
 							className="w-full px-4 py-2 border border-sky-200 rounded-md focus:outline-none focus:ring-2 focus:ring-sky-400"
 						/>
 					</div>
 
-					{/* Email (Optional) */}
+					{/* Email */}
 					<div>
 						<label className="block mb-1 font-semibold">Email (optional)</label>
 						<input
@@ -118,7 +117,7 @@ function Form() {
 						/>
 					</div>
 
-					{/* Requirement Dropdown */}
+					{/* Requirement */}
 					<div>
 						<label className="block mb-1 font-semibold">Your Requirement</label>
 						<select
@@ -136,7 +135,7 @@ function Form() {
 						</select>
 					</div>
 
-					{/* Location */}
+					{/* Preferred Location */}
 					<div>
 						<label className="block mb-1 font-semibold">Preferred Location</label>
 						<input
@@ -144,13 +143,13 @@ function Form() {
 							name="location"
 							value={formData.location}
 							onChange={handleChange}
-							placeholder="Enter location"
 							required
+							placeholder="Enter location"
 							className="w-full px-4 py-2 border border-sky-200 rounded-md focus:outline-none focus:ring-2 focus:ring-sky-400"
 						/>
 					</div>
 
-					{/* Budget Dropdown */}
+					{/* Budget */}
 					<div>
 						<label className="block mb-1 font-semibold">Budget</label>
 						<select
@@ -168,7 +167,7 @@ function Form() {
 						</select>
 					</div>
 
-					{/* Submit Button */}
+					{/* Submit */}
 					<div className="flex justify-center">
 						<button
 							type="submit"
