@@ -1,4 +1,4 @@
-import { Mail, Phone, MapPin } from 'lucide-react';
+import { Mail, Phone, MapPin, BadgeCheck} from 'lucide-react';
 
 function Footer() {
   return (
@@ -16,7 +16,7 @@ function Footer() {
           <h2 className="text-lg font-bold mb-3">Quick Links</h2>
           <ul className="space-y-2">
             <li><a href="/" className="hover:text-sky-900 transition-colors">Home</a></li>
-            <li><a href="/properties" className="hover:text-sky-900 transition-colors">Properties</a></li>
+            <li><a href="/projects/residential" className="hover:text-sky-900 transition-colors">Properties</a></li>
             <li><a href="/contact" className="hover:text-sky-900 transition-colors">Contact Us</a></li>
           </ul>
         </div>
@@ -28,6 +28,7 @@ function Footer() {
             <li className="flex items-center"><Phone className="w-4 h-4 mr-2" /> +91 9657308229</li>
             <li className="flex items-center"><Mail className="w-4 h-4 mr-2" /> propertyloook.pl@gmail.com</li>
             <li className="flex items-center"><MapPin className="w-4 h-4 mr-2" /> Pune, Maharashtra</li>
+            <li className="flex items-center"><BadgeCheck className="w-4 h-4 mr-2"/> MAHARERA No. A52100039213</li>
           </ul>
         </div>
 
